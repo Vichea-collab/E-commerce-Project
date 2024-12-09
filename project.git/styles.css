@@ -55,39 +55,110 @@ body {
     justify-content: space-around;
     width:200px;
 }
-.nav ul {
+
+/* General Navigation Styles */
+.nav {
+    position: relative;
+    width: 50%;
+    height: 50px;
+    background: #222;
+    border-radius: 10px;
     display: flex;
     justify-content: space-evenly;
-    list-style: none;
+    align-items: center;
+    margin: 0 auto; /* This will center the nav horizontally */
 }
-.nav{
-    margin:1rem 0px;
-}
-.nav ul li{
-    display: inline-block;
+
+/* Navigation Links */
+.nav a {
     position: relative;
-}
-.nav ul li a{
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+    color: white;
     text-decoration: none;
-    font-size: 30px;
-    display: block;
+    padding: 0 25px;
+    line-height: 50px;
+    z-index: 1;
 }
-.nav ul li ul.drop-nav li{
-    display: block;
-}
-.nav ul li ul.drop-nav{
-    width:100%;
+
+.nav span {
     position: absolute;
-    z-index: 12;
+    top: 0;
+    left: 0;
+    width: 177px;
+    height: 100%;
+    background: linear-gradient(45deg, #194b4f, #33fffc);
+    border-radius: 10px;
+    transition: 0.5s;
+    z-index: 0; /* Ensures it's behind the text */
+}
+
+/* Hover effect for each tab */
+.nav a:nth-child(1):hover ~ span {
+    left: 0%;
+}
+
+.nav .dropdown:hover ~ span {
+    left: 33.33%; /* Align the active background with the 'Shop' tab */
+}
+
+.nav a:nth-child(3):hover ~ span {
+    left: 66.66%; /* Align the active background with the 'Contact' tab */
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-btn {
+    font-size: 1em;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    padding: 0 25px;
+    line-height: 50px;
+    position: relative;
+    z-index: 2; /* Ensures the dropdown link stays above the background */
+}
+
+.drop-nav {
     display: none;
-    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #333;
+    border-radius: 8px;
+    list-style: none;
+    padding: 10px 0;
+    z-index: 10;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
-.nav ul li a:hover{
-    color:red;
+
+.drop-nav li {
+    margin: 0;
+    padding: 0;
 }
-.nav ul li.shop:hover ul{
-    display: flex;
+
+.drop-nav li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background 0.3s;
 }
+
+.drop-nav li a:hover {
+    background: #194b4f;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .drop-nav {
+    display: block;
+}
+
 
 /* Breadcrumb */
 .breadcrumb {
@@ -253,7 +324,7 @@ body {
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 25px;
     box-sizing: border-box;
 }
 
@@ -306,5 +377,4 @@ body {
     border-style: none;
     outline: none;
     border-bottom: 2px solid black;
-
 }
