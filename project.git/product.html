@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OtDeng</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <img id="logo" src="logo.png">
+        <div class="search">
+            <input type="text" id="search-border" placeholder="Search...">
+            <a href="#">
+                <i class="fas fa-search" id="search_icon"></i>
+            </a>
+        </div>
+        <div class="icon">
+            <i class="fa-regular fa-bell"></i>
+            <i class="fa-regular fa-heart" id="heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-regular fa-user"></i>
+        </div>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li class="shop">
+                <a href="">Shop</a>
+                <ul class="drop-nav">
+                    <li><a href="">Women</a></li>
+                    <li><a href="">Men</a></li>
+                    <li><a href="">Kid</a></li>
+                </ul>
+            </li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+    <script src="https://kit.fontawesome.com/3831c8164a.js" crossorigin="anonymous"></script>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="#">Home</a> > <a href="#">Shop</a> > <a href="#">Men</a> > <span>Lymio Casual Shirt</span>
+    </div>
+
+    <!-- Product Section -->
+    <section class="product">
+        <div class="product-images">
+            <div class="main-image">
+                <img src="pic/shirt1.jpg" alt="Lymio Casual Shirt">
+            </div>
+        </div>
+        <div class="product-details">
+            <h1>Lymio Casual Shirt</h1>
+            <p class="price">$30.85</p>
+            <div class="rating">
+                ★★★★☆ <span>(1 Customer Review)</span>
+            </div>
+            <p class="description">
+                Lymio Casual Half Sleeve Shirt for Men | Modern Stylish Shirt | Printed Design (Classic).
+            </p>
+            <div class="options">
+                <label>Size:</label>
+                <button>S</button>
+                <button>M</button>
+                <button>L</button>
+                <button>XL</button>
+                <label>Color:</label>
+                <div class="color-options">
+                    <span class="color" style="background-color: #000;"></span>
+                    <span class="color" style="background-color: #fff;"></span>
+                    <span class="color" style="background-color: #1e90ff;"></span>
+                </div>
+            </div>
+            <div class="quantity">
+                <button>-</button>
+                <input type="number" value="1">
+                <button>+</button>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+            <div class="product-info">
+                <p><strong>SKU:</strong> 95001</p>
+                <p><strong>Category:</strong> Half Sleeve</p>
+                <p><strong>Tags:</strong> Classic</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <h2>Related Products</h2>
+        <div class="product-list">
+            <div class="product-card">
+                <img src="hoodie.jpg" alt="Pullover Hoodie">
+                <p>Pullover Hoodie</p>
+                <p class="price">$31.55</p>
+            </div>
+            <div class="product-card">
+                <img src="striped-shirt.jpg" alt="Long Sleeve Casual">
+                <p>Long Sleeve Casual</p>
+                <p class="price">$31.55</p>
+            </div>
+            <div class="product-card">
+                <img src="formal-shirt.jpg" alt="LELEBEAR Men">
+                <p>LELEBEAR Men</p>
+                <p class="price">$32.55</p>
+            </div>
+            <div class="product-card">
+                <img src="polo-shirt.jpg" alt="Men's Polo Shirt">
+                <p>Men's Polo Shirt</p>
+                <p class="price">$32.55</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="box1">
+            <img src="logo.png" alt="">
+            <p>2nd Bridge Prek Leap, National Road Number 6, Phnom Penh Cambodia</p>
+        </div>
+        <div class="box2">
+            <p>link</p>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="box3">
+            <p>Help</p>
+            <b>Payment options</b>
+            <b>Returns</b>
+            <b>Privacy Policies</b>
+        </div>
+        <div class="box4">
+            <p>Newsletter</p>
+            <div class="inbox4">
+                <input type="email" placeholder="Enter Your Email Address">
+                <b>SUBSCRIBE</b>    
+            </div>
+        </div>
+    </div>
+</body>
+</html>
