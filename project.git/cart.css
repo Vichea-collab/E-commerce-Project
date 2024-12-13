@@ -2,11 +2,12 @@
 .header-cart {
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 3rem;
     justify-content: space-between;
     padding: 20px 0;
-    background: url('shirt1.jpg') no-repeat center center;
+    background: url('pic/cartbg.jpg') no-repeat center center;
     background-size: cover;
+    height: 30vh;
 }
 
 .header-cart .logo img {
@@ -21,18 +22,19 @@
 
 .header-cart-text h1 {
     margin: 0;
-    font-size: 2rem;
-    color: #a67c52;
+    font-size: 3rem;
+    color: #B88E2F;
 }
 
 .header-cart-text p {
     margin: 5px 0 0;
-    font-size: 1rem;
-    color: #888;
+    font-size: 2rem;
+    color: black;
 }
 
 /* Main Content */
 .main-content-cart {
+    padding: 50px;
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -60,7 +62,7 @@
 }
 
 .cart-items th {
-    background-color: #fdf7f0;
+    background-color: #F9F1E7;
     font-weight: bold;
 }
 
@@ -100,7 +102,7 @@
 /* Cart Totals Section */
 .cart-totals {
     width: 30%;
-    background-color: #fff;
+    background-color: #F9F1E7;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -109,7 +111,7 @@
 .cart-totals h2 {
     margin: 0 0 20px;
     font-size: 1.5rem;
-    color: #a67c52;
+    color: #B88E2F;
 }
 
 .cart-totals p {
@@ -123,20 +125,41 @@
     display: block;
     width: 100%;
     padding: 10px 0;
-    background-color: #a67c52;
-    color: #fff;
+    background-color: #F9F1E7;
+    color: black;
     text-align: center;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
+    border: black solid;
 }
 
 .cart-totals .checkout-btn:hover {
-    background-color: #855d3c;
+    background-color: #B88E2F;
 }
 .container-cart {
     height: 70vh;
+}
+
+.warranty i{
+    font-size: 70px;
+}
+.warranty{
+    display: flex;
+    background: #FAF3EA;
+    height: 20vh;
+    justify-content: space-around;
+    align-items: center;
+}
+.warranty .same{
+    display: flex;
+    gap:1rem;
+}
+.warranty .same div{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
 }
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -150,5 +173,13 @@
 
     .cart-items {
         width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .warranty {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+        height: 50vh;
     }
 }
