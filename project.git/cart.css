@@ -136,7 +136,7 @@
     background-color: #855d3c;
 }
 .container-cart {
-    height: 100vh;
+    height: 70vh;
 }
 /* Responsive Design */
 @media (max-width: 768px) {
