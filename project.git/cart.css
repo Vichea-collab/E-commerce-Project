@@ -139,7 +139,7 @@
     background-color: #B88E2F;
 }
 .container-cart {
-    height: 100vh;
+    height: 70vh;
 }
 
 .warranty i{
@@ -148,7 +148,7 @@
 .warranty{
     display: flex;
     background: #FAF3EA;
-    height: 30vh;
+    height: 20vh;
     justify-content: space-around;
     align-items: center;
 }
@@ -180,5 +180,6 @@
         flex-direction: column;
         gap: 2rem;
         padding: 2rem;
+        height: 50vh;
     }
 }
