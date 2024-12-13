@@ -151,17 +151,17 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .nav {
+    .navi {
         width: 80%; /* Increase width for smaller screens */
         height: 60px;
     }
 
-    .nav a {
+    .navi a {
         padding: 0 15px; /* Reduce padding for smaller screens */
         font-size: 0.9em; /* Slightly smaller font size */
     }
 
-    .nav span {
+    .navi span {
         width: 25%; /* Adjust the span to fit better on smaller screens */
     }
 
@@ -169,17 +169,17 @@ body {
         padding: 0 15px; /* Reduce padding for smaller screens */
     }
 
-    .drop-nav {
+    .drop-navi {
         width: 100%; /* Ensure dropdown takes full width */
     }
 }
 
 @media (max-width: 480px) {
-    .nav {
+    .navi {
         width: 100%; /* Full width on very small screens */
     }
 
-    .nav span {
+    .navi span {
         width: 50%; /* Adjust the span width for mobile */
     }
 }
