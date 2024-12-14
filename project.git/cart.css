@@ -1,35 +1,77 @@
 /* Header Section */
+.container-cart{
+    height: 100vh;
+}
 .header-cart {
     display: flex;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
     justify-content: space-between;
     padding: 20px 0;
     background: url('pic/cartbg.jpg') no-repeat center center;
-    background-size: cover;
+    background-size: cover; /* Keeps the image responsive */
     height: 30vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: -2;
 }
 
-.header-cart .logo img {
-    width: 50px;
-    height: auto;
+.header-cart::before {
+    content: '';
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(#0ef, transparent, transparent);
+    animation: animate 3s linear infinite;
+    z-index: 1; /* Places it above the background image but below the overlay */
+    pointer-events: none; /* Ensures it doesn't interfere with interaction */
+}
+
+.header-cart::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(45, 45, 45, 0.5); /* Adds a semi-transparent overlay */
+    z-index: 2; /* Places it above the animated gradient */
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-150%, -150%);
+    }
+    25% {
+        transform: translate(0, -150%);
+    }
+    50% {
+        transform: translate(0, 0);
+    }
+    75% {
+        transform: translate(-150%, 0);
+    }
+    100% {
+        transform: translate(-150%, -150%);
+    }
 }
 
 .header-cart-text {
     text-align: center;
     flex: 1;
+    z-index: 3; /* Ensures text appears on top of all layers */
 }
 
 .header-cart-text h1 {
     margin: 0;
     font-size: 3rem;
-    color: #B88E2F;
+    color: #0ef; /* Gold color to match the luxury theme */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adds depth to text */
 }
 
 .header-cart-text p {
     margin: 5px 0 0;
     font-size: 2rem;
-    color: black;
+    color: #F0F8FF; /* Light blue that complements the radial gradient */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Subtle shadow for better readability */
 }
 
 /* Main Content */
@@ -43,7 +85,7 @@
 
 /* Cart Items Section */
 .cart-items {
-    width: 70%;
+    width: 100%;
 }
 
 .cart-items table {
@@ -62,8 +104,9 @@
 }
 
 .cart-items th {
-    background-color: #F9F1E7;
+    background-color: rgb(89, 123, 126);
     font-weight: bold;
+    color: white;
 }
 
 .cart-items td {
@@ -101,8 +144,9 @@
 
 /* Cart Totals Section */
 .cart-totals {
-    width: 30%;
-    background-color: #F9F1E7;
+    margin: 0 20px;
+    width: 20%;
+    background-color: rgb(89, 123, 126);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -111,7 +155,7 @@
 .cart-totals h2 {
     margin: 0 0 20px;
     font-size: 1.5rem;
-    color: #B88E2F;
+    color: white;
 }
 
 .cart-totals p {
@@ -119,67 +163,125 @@
     justify-content: space-between;
     font-size: 1rem;
     margin: 10px 0;
+    color: white;
 }
 
-.cart-totals .checkout-btn {
+.cart-totals .addlink {
     display: block;
     width: 100%;
     padding: 10px 0;
-    background-color: #F9F1E7;
-    color: black;
+    background-color: black;
+    color: white;
     text-align: center;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+    justify-content: center;
     cursor: pointer;
     border: black solid;
+    margin: 0 auto;
 }
 
-.cart-totals .checkout-btn:hover {
-    background-color: #B88E2F;
-}
-.container-cart {
-    height: 70vh;
+/* Warranty Section */
+.warranty i {
+    font-size: 60px;
 }
 
-.warranty i{
-    font-size: 70px;
-}
-.warranty{
+.warranty {
     display: flex;
-    background: #FAF3EA;
-    height: 20vh;
+    background: #0ef;
+    height: 25vh;
     justify-content: space-around;
     align-items: center;
 }
-.warranty .same{
+
+.warranty .same {
     display: flex;
-    gap:1rem;
+    gap: 1rem;
 }
-.warranty .same div{
+
+.warranty .same div {
     display: flex;
     flex-direction: column;
-    gap:1rem;
+    gap: 1rem;
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .main-content-cart {
         flex-direction: column;
+        padding: 20px; /* Adjust padding on smaller screens */
     }
 
     .cart-totals {
-        width: 100%;
+        width: 100%; /* Cart totals section takes full width */
+        margin-top: 20px; /* Space between sections */
+        margin-left: auto;
     }
 
     .cart-items {
-        width: 100%;
+        width: 100%; /* Cart items section takes full width */
     }
-}
-@media screen and (max-width: 768px) {
+
+    .cart-items th, .cart-items td {
+        padding: 10px; /* Less padding for better fit */
+    }
+
+    .cart-items img {
+        width: 40px; /* Adjust image size */
+        height: 40px;
+    }
+
+    .cart-items input {
+        width: 40px; /* Adjust input size */
+    }
+
+    .cart-totals .addlink {
+        width: 80%; /* Button size for mobile */
+        font-size: 1.2rem; /* Larger font size for mobile */
+        padding: auto;
+    }
+
     .warranty {
         flex-direction: column;
         gap: 2rem;
         padding: 2rem;
-        height: 50vh;
+        height: 60vh;
+    }
+}
+
+/* Very Small Screen (Mobile) */
+@media screen and (max-width: 480px) {
+    .header-cart {
+        height: 40vh; /* Adjust header size for small screens */
+    }
+
+    .header-cart-text h1 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .header-cart-text p {
+        font-size: 1.2rem; /* Adjust paragraph font size */
+    }
+
+    .cart-items img {
+        width: 30px; /* Smaller product images */
+        height: 30px;
+    }
+
+    .cart-items input {
+        width: 30px; /* Smaller input fields */
+    }
+
+    .cart-totals .addlink {
+        font-size: 1rem; /* Adjust button font size */
+    }
+    .cart-totals {
+        width: 100%;
+        margin-left: auto;
+    }
+
+    .warranty i {
+        font-size: 50px; /* Adjust icon size */
     }
 }
