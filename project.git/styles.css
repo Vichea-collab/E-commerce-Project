@@ -67,9 +67,9 @@ body {
     height: 50px;
     align-items: center;
     text-align: center;
-    justify-content: center;
-    width: 100%;
+    width: 50%;
     justify-content: space-evenly;
+    margin: 0 auto;
 }
 .navi a {
     position: relative;
@@ -165,10 +165,6 @@ body {
         width: 25%; /* Adjust the span to fit better on smaller screens */
     }
 
-    .dropdown .drop-btn {
-        padding: 0 15px; /* Reduce padding for smaller screens */
-    }
-
     .drop-navi {
         width: 100%; /* Ensure dropdown takes full width */
     }
@@ -184,18 +180,16 @@ body {
     }
 }
 
-
-
 /* Breadcrumb */
 .breadcrumb {
     padding: 2rem 2rem;
-    background-color: #F9F1E7;
-    color: #666;
+    background-color: rgb(89, 123, 126);
+    color: white;
     margin-top: 3rem;
 }
 
 .breadcrumb a {
-    color: #333;
+    color: white;
     text-decoration: none;
 }
 
@@ -243,7 +237,7 @@ body {
 
 .product-details .price {
     font-size: 1.8rem;
-    color: #e63946;
+    color: blue;
     font-weight: bold;
     margin-bottom: 1rem;
 }
@@ -332,18 +326,146 @@ body {
 }
 
 /* Add to Cart Button */
-.add-to-cart {
-    padding: 1rem;
-    color: black;
-    border: black solid;
-    cursor: pointer;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    width: 215px;
+.addlink {
+    position: relative;
+    display: inline-block;
+    color: rgba(255, 255, 255, .4);
+    background: #111;
+    padding: 10px 30px;
+    font-size: 24px;
+    letter-spacing: 1.6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    transition-delay: .8s;
+    width: 50%;
+    text-align: center;
 }
-.add-to-cart:hover {
-    background-color: #cda319;
+
+/* Responsive for medium screens */
+@media (max-width: 768px) {
+    .addlink {
+        width: 50%; /* Increase the width on smaller screens */
+        font-size: 20px; /* Slightly smaller font */
+        padding: 8px 20px; /* Adjust padding */
+    }
+}
+
+/* Responsive for small screens */
+@media (max-width: 480px) {
+    .addlink {
+        width: 80%; /* Further increase the width on very small screens */
+        font-size: 18px; /* Smaller font size */
+        padding: 8px 15px; /* Adjust padding further */
+    }
+}
+
+.addlink:hover {
+    color: #0ef;
+    text-shadow: 0 0 5px #0ef;
+    letter-spacing: 4px;
+    transition-delay: 1ms;
+}
+
+.addlink .addspan {
+    position: absolute;
+    display: block;
+    background: #0ef;
+    box-shadow: 0 0 5px #0ef;
+}
+
+.addlink .addspan:nth-child(1) {
+    left: 0;
+    top: 0;
+    width: 50.5%;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transform-origin: left;
+}
+
+.addlink:hover .addspan:nth-child(1) {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.addlink .addspan:nth-child(2) {
+    right: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transform-origin: right;
+}
+
+.addlink:hover .addspan:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.addlink .addspan:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transition: transform .5s;
+    transform-origin: top;
+    transition-delay: .4s;
+}
+
+.addlink:hover .addspan:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+}
+
+.addlink .addspan:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transition: transform .5s;
+    transform-origin: bottom;
+    transition-delay: .4s;
+}
+
+.addlink:hover .addspan:nth-child(4) {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+.addlink .addspan:nth-child(5) {
+    right: 0;
+    top: 0;
+    width: 50.5%;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transform-origin: left;
+    transition-delay: .8s;
+}
+
+.addlink:hover .addspan:nth-child(5) {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.addlink .addspan:nth-child(6) {
+    left: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transform-origin: right;
+    transition-delay: .8s;
+}
+
+.addlink:hover .addspan:nth-child(6) {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 /* Product Info Section */
@@ -382,14 +504,16 @@ body {
 }
 
 .related-products h2 {
+    color: #0ef;
+    text-align: center;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .product-list {
-    display: flex;
-    justify-content: space-evenly;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     gap: 2rem;
 }
 
@@ -411,7 +535,7 @@ body {
 
 .product-card .price {
     font-size: 1.2rem;
-    color: #e63946;
+    color: blue;
     margin-top: 0.5rem;
 }
 
@@ -435,7 +559,7 @@ ul{
 	list-style: none;
 }
 .footer{
-	background-color: #24292E;
+	background-color: rgb(89, 123, 126);
     padding: 70px 0;
 }
 .footer-col{
@@ -444,7 +568,7 @@ ul{
 }
 .footer-col h4{
 	font-size: 18px;
-	color: #ffffff;
+	color: white;
 	text-transform: capitalize;
 	margin-bottom: 35px;
 	font-weight: 500;
@@ -455,7 +579,7 @@ ul{
 	position: absolute;
 	left:0;
 	bottom: -10px;
-	background-color: #e91e63;
+	background-color: #0ef;
 	height: 2px;
 	box-sizing: border-box;
 	width: 50px;
@@ -505,4 +629,18 @@ ul{
   .footer-col{
     width: 100%;
 }
+}
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .product-list{
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+/* Responsive styles: 1 card per row for very small screens */
+@media (max-width: 480px) {
+    .product-list {
+        grid-template-columns: 1fr; /* 1 column */
+        justify-items: center;
+    }
 }
