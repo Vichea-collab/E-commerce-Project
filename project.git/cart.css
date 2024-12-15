@@ -181,6 +181,9 @@
     border: black solid;
     margin: 0 auto;
 }
+.cart-totals .total {
+    color: red;
+}
 
 /* Warranty Section */
 .warranty i {
@@ -243,10 +246,29 @@
     }
 
     .warranty {
-        flex-direction: column;
-        gap: 2rem;
-        padding: 2rem;
-        height: 60vh;
+        display: grid; /* Switch to a grid layout */
+        grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
+        grid-template-rows: auto auto; /* Create rows to fit content */
+        gap: 1.5rem; /* Add spacing between rows and columns */
+        padding: 1rem; /* Add padding for smaller screens */
+        height: auto; /* Adjust height to fit content */
+        justify-items: center; /* Center-align items horizontally */
+        align-items: center; /* Center-align items vertically */
+        text-align: center; /* Center-align text */
+    }
+
+    .warranty i {
+        font-size: 50px; /* Adjust icon size */
+    }
+
+    .warranty .same {
+        flex-direction: column; /* Stack text and icons vertically in each grid item */
+        align-items: center; /* Center-align content within grid items */
+        gap: 1rem; /* Add spacing between elements */
+    }
+
+    .warranty .same div {
+        align-items: center; /* Center-align text in each grid cell */
     }
 }
 
@@ -281,7 +303,26 @@
         margin-left: auto;
     }
 
+    .warranty {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 1.5rem; /* Add spacing between elements */
+        padding: 1rem; /* Add padding for smaller screens */
+        height: auto; /* Adjust height to fit content */
+        align-items: center; /* Center-align items */
+        justify-content: center; /* Center-align items vertically */
+        text-align: center; /* Center-align text */
+    }
+
     .warranty i {
         font-size: 50px; /* Adjust icon size */
+    }
+
+    .warranty .same {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 1rem; /* Add spacing between items */
+    }
+
+    .warranty .same div {
+        align-items: center; /* Center-align text in each section */
     }
 }
