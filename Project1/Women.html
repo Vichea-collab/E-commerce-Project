@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OtDeng</title>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <img id="logo" src="logo.png">
+        <div class="search">
+            <input type="text" id="search-border" placeholder="Search...">
+            <a href="#">
+                <i class="fas fa-search" id="search_icon"></i>
+            </a>
+        </div>
+        <div class="icon">
+            <i class="fa-regular fa-bell"></i>
+            <i class="fa-regular fa-heart" id="heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-regular fa-user"><a href="index.html">Login</a></i>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="home.html">Home</a>
+        <div class="dropdown">
+            <a href="product.html" class="drop-btn">Shop</a>
+            <ul class="drop-nav">
+                <li><a href="">Men</a></li>
+                <li><a href="">Women</a></li>
+                <li><a href="">Kids</a></li>
+            </ul>
+        </div>
+        <a href="">Contact</a>
+        <span></span>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/3831c8164a.js" crossorigin="anonymous"></script>
+
+    <!-- pano-->
+    <div class="img">
+        <img src="Discount.jpg">
+    </div>
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="#">Home</a> > <a href="#">Shop</a> > <a href="#">Men</a> > <a href="#">Women</a> > <a href="#">Kids</a>| <span>Lymio Casual Shirt</span>
+    </div>
+
+    <!-- Shop -->
+    <div>
+        <div class="shop">
+            <div class="item">
+                <a href="#"></a><img src="data:image/jpeg;base64,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"></a>
+                <h3>Kawaii Bunny</h3>
+                <div id="price">
+                    <p>19.99$</p>
+                    <del>39.99$</del>
+                </div>
+            </div>
+            <div class="item">
+                <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTeIlzztEeAO4dTQpx6BtRIob9z2fl8kVtWA&s"></a>
+                <h3>Summer Shirt</h3>
+                <div id="price">
+                    <p>30.89$</p>
+                </div>
+            </div>
+            <div class="item">
+                <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSJYBcD8z5XesY4a08avJ2t26_KNd-Cl7Utw&s"></a>
+                <h3>Kawaii Shirt</h3>
+                <div id="price">
+                    <p>27.99$</p>
+                </div>
+            </div>
+            <div class="item">
+                <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFjrpRrPb4v3WLMdttZgW-f4Vd4WXv5NXSQA&s"></a>
+                <h3>Autumn Shirt</h3>
+                <div id="price">
+                    <p>24$</p>
+                    <del>37$</del>
+                </div>
+            </div>
+        </div>
+        <div class="shop">
+            <div class="item">
+                <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQF1N2BgfOVCeotez341yk9Spq6lTG-FIE5g&s"></a>
+                <h3>Summer Shirt</h3>
+                <div id="price">
+                    <p>26$</p>
+                    <del>32.43$</del>
+                </div>
+            </div>
+            <div class="item">
+                <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvhfFnWiOz1kSNL5zaCAbqbGm5GEwl6AuD1A&s"></a>
+                <h3>Avocado Shirt</h3>
+                <div id="price">
+                    <p>19$</p>
+                    <del>38$</del>
+                </div>
+            </div>
+            <div class="item">
+                <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGBQ8MQpESS3UowtCUjsRnWZdA2CgLQLx27w&s"></a>
+                <h3>Waffle knit</h3>
+                <div id="price">
+                    <p>25$</p>
+                </div>
+            </div>
+            <div class="item">
+                <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE8JjsQK0dB8HLnDgRjfIroG8-aF9wcJxh2w&s"></a>
+                <h3>Cartoon Streetwear</h3>
+                <div id="price">
+                    <p>26.55$</p>
+                </div>
+            </div>
+        </div>
+        <div class="shop">
+            <div class="item">
+                <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv-qgs76wm7G8s-dGUdjXwDWmxsVLrM3P-pQ&s"></a>
+                <h3>Muslimah Fashion</h3>
+                <div id="price">
+                    <p>16.50$</p>
+                    <del>33$</del>
+                </div>
+            </div>
+            <div class="item">
+                <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQamhPuas2mg4yG94ROmWa7BqWsuOkbj6WzaA&s"></a>
+                <h3>Summer Sweet</h3>
+                <div id="price">
+                    <p>32$</p>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNfUnh1x3mDV9S4cedQoJOHgZ5-RrlR8_Glg&s"></a>
+                <h3>V-neck T-shirt</h3>
+                <div id="price">
+                    <p>34.15$</p>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShUAIykByB-3R6jouf9TvuR5yTLswCD2tSWA&s"></a>
+                <h3>Tuck Style</h3>
+                <div id="price">
+                    <p>25.99$</p>
+                </div>
+            </div>
+        </div>
+        <div class="shop">
+            <div class="item">
+                <a href="index.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRugY53tIjwTq3Qx5u8LzHQdOBYornNF_h3iw&s"></a>
+                <h3>Outdoor Summer</h3>
+                <div id="price">
+                    <p>20$</p>
+                    <del>40$</del>
+                </div>
+            </div>
+            <div class="item">
+                <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhr77ghauQvAzePNTngkBQyGKs-RIB1PTfLw&s"></a>
+                <h3>Women T-Shirt</h3>
+                <div id="price">
+                    <p>35$</p>
+                </div>
+            </div>
+            <div class="item">
+                <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS08UPXE4Dtuz05zZ2JA9sY0D5ZtOOZvZaerg&s"></a>
+                <h3>Short Casual</h3>
+                <div id="price">
+                    <p>30$</p>
+                    <del>40$</del>
+                </div>
+            </div>
+            <div class="item">
+                <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZCp-bL5GOmiEAb7EpwjfrcTQ93mEgbXaRFA&s"></a>
+                <h3>Casual T-shirt</h3>
+                <div id="price">
+                    <p>25.35$</p>
+                    <del>32.43$</del>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="button1">
+        <a href="Women.html"><button class="button">1</button></a>
+        <a href="Women2.html"><button class="button">2</button></a>
+        <a href="Kids.html"><button class="button">Next</button></a>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>OtDeng.</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Kid</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; font-size: 14px; margin-top: 20px;">&copy; 2024 Otdeng. All rights reserved.</p>
+   </footer> 
+
