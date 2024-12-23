@@ -367,7 +367,7 @@ body{
 }
 .warranty{
     display: flex;
-    background: #FAF3EA;
+    background: #F0F8FF;
     height: 300px;
     justify-content: space-around;
     align-items: center;

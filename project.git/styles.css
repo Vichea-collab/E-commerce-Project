@@ -82,7 +82,7 @@ body {
     display:flex;
     cursor: pointer;
     padding:10px 20px;
-    background: #F9F1E7;
+    background: white;
     border-radius: 30px;
     align-items: center;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
@@ -126,14 +126,14 @@ body {
     justify-content: space-evenly;
     margin: 0 auto;
     top:80px;
-    background-color: white;
+    background-color: black;
     border-radius: 20px;
 }
 .navi a {
     position: relative;
     font-size: 1.1em;
     font-weight: 500;
-    color: #333;
+    color: white;
     text-decoration: none;
     padding: 6px 20px;
     transition: .5s;
@@ -168,10 +168,10 @@ body {
 .drop-nav {
     display: none; /* Initially hide the dropdown */
     position: absolute;
-    top: 100%; /* Position below the Shop tab */
+    top: 40px; /* Position below the Shop tab */
     left: 50%; /* Align it to the center horizontally */
     transform: translateX(-50%); /* Center it by adjusting its left position */
-    background: #fff;
+    background: black;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 10px 0;
@@ -187,7 +187,7 @@ body {
 .drop-nav li a {
     display: block;
     padding: 10px 20px;
-    color: #333;
+    color: white;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -703,5 +703,95 @@ ul{
     .product-list {
         grid-template-columns: 1fr; /* 1 column */
         justify-items: center;
+    }
+}
+
+@media screen and (max-width:1025px) and (min-width:767px){
+    .button-noti1{
+        width:150px;
+    } 
+    #noti{
+        width:50%;
+    }
+}
+@media screen and (max-width:769px) and (min-width:426px){
+    #noti{
+        width:70%;
+    }
+    .button-noti1{
+        width:160px;
+    }
+    .body{
+        padding:1rem 0;
+    }
+    .card{
+        width:350px;
+    }
+    .container .card .box button{
+        width:150px;
+        height:35px;
+    }
+    .select{
+        gap:1rem;
+        margin:1rem 0px 1rem 0px;
+    }
+    .warranty .same{
+        flex-direction: column;
+        align-items: center;
+    }
+    .warranty .same div{
+        align-items: center;
+    }
+}
+@media screen and (max-width:426px) {
+    .button-noti1{
+        width:140px;
+    }
+    #noti{
+        width:100%;
+    }
+    .warranty .same{
+        flex-direction: column;
+        align-items: center;
+    }
+    .warranty .same i{
+        font-size: 2rem;
+    }
+    .warranty{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .header #logo{
+        width:90px;
+        height:auto;
+    }
+    .search a i{
+        font-size: 15px;
+    }
+    .header .search{
+        height:15px;
+    }
+    .search input{
+        font-size: 10px;
+    }
+    .search:hover input{
+        width:100px;
+    }
+    .header{
+        padding:5px;
+    }
+    .icon{
+        width:100px;
+        font-size: 15px;
+        left:-10px;
+    }
+    .bg-fav{
+        display: none;
+    }
+    .card{
+        width:380px
+    }
+    .select{
+        gap:5px;
     }
 }

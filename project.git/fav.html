@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FavPage</title>
     <link rel="stylesheet" href="fav.css">
-    <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/3831c8164a.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -20,7 +19,7 @@
                 <P>👋 Welcome to otdeng</P>
             </div>
             <div>
-                <img src="kid-img/5-usd-register-gift-4.png" alt="" id="img">
+                <img src="pic/kid-img/5-usd-register-gift-4.png" alt="" id="img">
                 <p>Register your account and get an instant $5 Off Voucher. Contact our customer service for more info. Happy Shopping!</p>
             </div>
             <Button class="button-noti">Register Now!</Button>
@@ -29,7 +28,7 @@
                 <P>🚨 End-of-Year SALE! 🚨</P>
             </div>
             <div>
-                <img src="kid-img/Zando - Banner.png" alt="" id="img">
+                <img src="pic/kid-img/Zando - Banner.png" alt="" id="img">
                 <p>🔥Shop Now! Run Faster. Train Harder. Step with Style. 🔥</p>
             </div>
             <div class="butt">
@@ -41,7 +40,7 @@
                 <p>🌱 COFFEE LOVERS SERIES 4 | NO BOUNDARIES FRIENDSHIP ☕️</p>
             </div>
             <div>
-                <img src="kid-img/Web-Banner.jpg" alt="" id="img">
+                <img src="pic/kid-img/Web-Banner.jpg" alt="" id="img">
                 <p>Prices have dropped! New Styles available. Hurry and SHOP your favorites NOW!🕐😍</p>
             </div>
             <button class="button-noti">Shop Now</button>
@@ -50,7 +49,7 @@
                 <p>🔥Adventure Series Collection🏕</p>
             </div>
             <div>
-                <img src="kid-img/361 - WILD WEEKEND ADVENTURE App Banner.jpg" alt="" id="img">
+                <img src="pic/kid-img/361 - WILD WEEKEND ADVENTURE App Banner.jpg" alt="" id="img">
                 <p>Start your journey today with otdeng Cambodia. Now available in otdeng App & Website📲</p>
             </div>
             <button class="button-noti">Shop Now</button>
@@ -66,15 +65,15 @@
         </div>
         <div class="icon">
             <i class="fa-regular fa-bell" id="notificationIcon"></i>
-            <a href="fav.html"><i class="fa-regular fa-heart"></i></a>
-            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="login.html"><i class="fa-regular fa-user"></i></a>
+            <a href="fav.html"><i class="fa-regular fa-heart" ></i></a>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-regular fa-user"></i>
         </div>
     </div>
     <div class="navi">
-        <a href="home.html">Home<span></span></a>
+        <a href="/project.git/home.html">Home<span></span></a>
         <div class="shop-container">
-            <a href="shop.html">Shop<span></span></a>
+            <a href="Mix_shop.html">Shop<span></span></a>
             <ul class="drop-nav">
                 <li><a href="Men.html">Men</a></li>
                 <li><a href="Women.html">Women</a></li>
@@ -83,7 +82,6 @@
         </div>
         <a href="Contact.html">Contact<span></span></a>
     </div>
-
     <div class="bg-fav">
     </div>
     <div class="body">
@@ -345,16 +343,15 @@
             </div>
         </div>
     </div>
-    
     <footer class="footer">
-        <div class="container">
+        <div class="container1">
             <div class="row">
                 <div class="footer-col">
                     <h4>OtDeng.</h4>
                     <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="Contact.html">Contact Us</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -370,9 +367,9 @@
                 <div class="footer-col">
                     <h4>online shop</h4>
                     <ul>
-                        <li><a href="Men.html">Men</a></li>
-                        <li><a href="Women.html">Women</a></li>
-                        <li><a href="Kids.html">Kid</a></li>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Kid</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -387,8 +384,44 @@
             </div>
         </div>
         <p style="text-align: center; font-size: 14px; margin-top: 20px;">&copy; 2024 Otdeng. All rights reserved.</p>
-   </footer>
-   
-   <script src="java.js"></script>
+    </footer> 
+    <script>
+        // Toggle notification visibility when the bell icon is clicked
+        document.getElementById("notificationIcon").addEventListener("click", function(event) {
+            const notificationPage = document.getElementById("noti");
+            // Toggle display of the notification page
+            if (notificationPage.style.display === "none" || notificationPage.style.display === "") {
+                notificationPage.style.display = "flex";
+            } else {
+                notificationPage.style.display = "none";
+            }
+            // Prevent the click from propagating to the document
+            event.stopPropagation();
+        });
+
+        // Close the notification page when clicking outside of it
+        document.addEventListener("click", function(event) {
+            const notificationPage = document.getElementById("noti");
+            const notificationIcon = document.getElementById("notificationIcon");
+
+            // Check if the click is outside of the notification box and the bell icon
+            if (!notificationPage.contains(event.target) && event.target !== notificationIcon) {
+                notificationPage.style.display = "none"; // Hide notification if clicked outside
+            }
+        });
+
+        window.addEventListener("scroll", function() {
+            const notificationPage = document.getElementById("noti");
+            if (notificationPage.style.display === "flex") {
+                notificationPage.style.display = "none"; // Hide notification if scrolled outside
+            }
+        });
+
+        document.getElementById("closeBtn").addEventListener("click", function(event) {
+            const notificationPage = document.getElementById("noti");
+            notificationPage.style.display = "none"; // Hide notification when close button is clicked
+            event.stopPropagation(); // Prevent the click from propagating
+        });
+    </script>
 </body>
 </html>

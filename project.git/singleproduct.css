@@ -55,7 +55,7 @@
 
 .product-details .price {
     font-size: 1.8rem;
-    color: blue;
+    color: red;
     font-weight: bold;
     margin-bottom: 1rem;
 }
@@ -93,7 +93,7 @@
 }
 
 .options button:hover {
-    background-color: #B88E2F;
+    background-color: #0ef;
     color: #fff;
 }
 
@@ -210,7 +210,7 @@
 
 .product-card .price {
     font-size: 1.2rem;
-    color: blue;
+    color: red;
     margin-top: 0.5rem;
 }
 @media (max-width: 768px) { /* Adjust breakpoint as needed */
