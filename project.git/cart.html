@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/3831c8164a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Header -->
+    <div id="noti">
+        <div class="head">
+            <h2>Notification</h2>
+            <i class="fa-solid fa-x" id="closeBtn"></i>
+        </div>
+        <div class="body1">
+            <div class="flex">
+                <i class="fa-regular fa-bell"></i>
+                <P>👋 Welcome to otdeng</P>
+            </div>
+            <div>
+                <img src="pic/kid-img/5-usd-register-gift-4.png" alt="" id="img">
+                <p>Register your account and get an instant $5 Off Voucher. Contact our customer service for more info. Happy Shopping!</p>
+            </div>
+            <Button class="button-noti">Register Now!</Button>
+            <div class="flex">
+                <i class="fa-regular fa-bell"></i>
+                <P>🚨 End-of-Year SALE! 🚨</P>
+            </div>
+            <div>
+                <img src="pic/kid-img/Zando - Banner.png" alt="" id="img">
+                <p>🔥Shop Now! Run Faster. Train Harder. Step with Style. 🔥</p>
+            </div>
+            <div class="butt">
+                <button  class="button-noti1">Shop Men</button>
+                <buttom  class="button-noti1">Shop Women</buttom>
+            </div>
+            <div class="flex">
+                <i class="fa-regular fa-bell"></i>
+                <p>🌱 COFFEE LOVERS SERIES 4 | NO BOUNDARIES FRIENDSHIP ☕️</p>
+            </div>
+            <div>
+                <img src="pic/kid-img/Web-Banner.jpg" alt="" id="img">
+                <p>Prices have dropped! New Styles available. Hurry and SHOP your favorites NOW!🕐😍</p>
+            </div>
+            <button class="button-noti">Shop Now</button>
+            <div class="flex">
+                <i class="fa-regular fa-bell"></i>
+                <p>🔥Adventure Series Collection🏕</p>
+            </div>
+            <div>
+                <img src="pic/kid-img/361 - WILD WEEKEND ADVENTURE App Banner.jpg" alt="" id="img">
+                <p>Start your journey today with otdeng Cambodia. Now available in otdeng App & Website📲</p>
+            </div>
+            <button class="button-noti">Shop Now</button>
+        </div>
+    </div>
+    <div class="header">
+        <img id="logo" src="pic/logo.png">
+        <div class="search">
+            <input type="text" id="search-border" placeholder="Search...">
+            <a href="#">
+                <i class="fas fa-search" id="search_icon"></i>
+            </a>
+        </div>
+        <div class="icon">
+            <i class="fa-regular fa-bell" id="notificationIcon"></i>
+            <a href="fav.html"><i class="fa-regular fa-heart"></i></a>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="login.html"><i class="fa-regular fa-user"></i></a>
+        </div>
+    </div>
+    <div class="navi">
+        <a href="home.html">Home<span></span></a>
+        <div class="shop-container">
+            <a href="shop.html">Shop<span></span></a>
+            <ul class="drop-nav">
+                <li><a href="Men.html">Men</a></li>
+                <li><a href="Women.html">Women</a></li>
+                <li><a href="Kids.html">Kids</a></li>
+            </ul>
+        </div>
+        <a href="Contact.html">Contact<span></span></a>
+    </div>
+
+    <div class="container-cart">
+        <!-- Header Section -->
+        <header class="header-cart">
+            <div class="header-cart-text">
+                <h1>Cart</h1>
+                <p>Home &gt; Cart</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content-cart">
+            <!-- Cart Items Section -->
+            <section class="cart-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="product">
+                                <img src="pic/cartnsingle/shirt1.jpg" alt="Lymio Casual Shirt">
+                                <span>Lymio Casual Shirt</span>
+                            </td>
+                            <td>30.8$</td>
+                            <td><input type="number" value="1"></td>
+                            <td>30.8$</td>
+                            <td><button class="delete-btn">🗑️</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Cart Totals Section -->
+            <aside class="cart-totals">
+                <h2>Cart Totals</h2>
+                <p>Subtotal: <span>30.8$</span></p>
+                <p>Total: <span>30.8$</span></p>
+                <a href="checkout.html" class="addlink" id="addlink">
+                    Checkout
+                    <span class="addspan"></span>
+                    <span class="addspan"></span>
+                    <span class="addspan"></span>
+                    <span class="addspan"></span>
+                    <span class="addspan"></span>
+                    <span class="addspan"></span>
+                </a>
+            </aside>
+        </main>
+    </div>
+
+    <div class="warranty">
+        <div class="same">
+            <i class="fa-solid fa-medal"></i>
+            <div>
+                <h3>High Quanlity</h3>
+                <p>crafted from top materials</p>
+            </div>
+        </div>
+        <div class="same">
+            <i class="fa-regular fa-square-check"></i>
+            <div>
+                <h3>Available To Change</h3>
+                <p>1week</p>
+            </div>
+        </div>
+        <div class="same">
+            <i class="fa-solid fa-truck-fast"></i>
+            <div>
+                <h3>Free Shiping</h3>
+                <p>Order over 40 $</p>
+            </div>
+        </div>
+        <div class="same">
+            <i class="fa-solid fa-user-clock"></i>
+            <div>
+                <h3>27 / 7 Support</h3>
+                <p>Dedicated support</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>OtDeng.</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="Contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="Men.html">Men</a></li>
+                        <li><a href="Women.html">Women</a></li>
+                        <li><a href="Kids.html">Kid</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; font-size: 14px; margin-top: 20px;">&copy; 2024 Otdeng. All rights reserved.</p>
+   </footer>
+   
+   <script src="java.js"></script>
+</body>
+</html>
