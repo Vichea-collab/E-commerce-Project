@@ -65,15 +65,15 @@
         </div>
         <div class="icon">
             <i class="fa-regular fa-bell" id="notificationIcon"></i>
-            <a href="fav.html"><i class="fa-regular fa-heart" ></i></a>
-            <i class="fa-solid fa-cart-shopping"></i>
-            <i class="fa-regular fa-user"></i>
+            <a href="fav.html"><i class="fa-regular fa-heart"></i></a>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="login.html"><i class="fa-regular fa-user"></i></a>
         </div>
     </div>
     <div class="navi">
-        <a href="/project.git/home.html">Home<span></span></a>
+        <a href="home.html">Home<span></span></a>
         <div class="shop-container">
-            <a href="Mix_shop.html">Shop<span></span></a>
+            <a href="shop.html">Shop<span></span></a>
             <ul class="drop-nav">
                 <li><a href="Men.html">Men</a></li>
                 <li><a href="Women.html">Women</a></li>
@@ -82,6 +82,7 @@
         </div>
         <a href="Contact.html">Contact<span></span></a>
     </div>
+
     <div class="bg-fav">
     </div>
     <div class="body">
@@ -349,9 +350,9 @@
                 <div class="footer-col">
                     <h4>OtDeng.</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Shop</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="Contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -367,9 +368,9 @@
                 <div class="footer-col">
                     <h4>online shop</h4>
                     <ul>
-                        <li><a href="#">Men</a></li>
-                        <li><a href="#">Women</a></li>
-                        <li><a href="#">Kid</a></li>
+                        <li><a href="Men.html">Men</a></li>
+                        <li><a href="Women.html">Women</a></li>
+                        <li><a href="Kids.html">Kid</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -385,43 +386,6 @@
         </div>
         <p style="text-align: center; font-size: 14px; margin-top: 20px;">&copy; 2024 Otdeng. All rights reserved.</p>
     </footer> 
-    <script>
-        // Toggle notification visibility when the bell icon is clicked
-        document.getElementById("notificationIcon").addEventListener("click", function(event) {
-            const notificationPage = document.getElementById("noti");
-            // Toggle display of the notification page
-            if (notificationPage.style.display === "none" || notificationPage.style.display === "") {
-                notificationPage.style.display = "flex";
-            } else {
-                notificationPage.style.display = "none";
-            }
-            // Prevent the click from propagating to the document
-            event.stopPropagation();
-        });
-
-        // Close the notification page when clicking outside of it
-        document.addEventListener("click", function(event) {
-            const notificationPage = document.getElementById("noti");
-            const notificationIcon = document.getElementById("notificationIcon");
-
-            // Check if the click is outside of the notification box and the bell icon
-            if (!notificationPage.contains(event.target) && event.target !== notificationIcon) {
-                notificationPage.style.display = "none"; // Hide notification if clicked outside
-            }
-        });
-
-        window.addEventListener("scroll", function() {
-            const notificationPage = document.getElementById("noti");
-            if (notificationPage.style.display === "flex") {
-                notificationPage.style.display = "none"; // Hide notification if scrolled outside
-            }
-        });
-
-        document.getElementById("closeBtn").addEventListener("click", function(event) {
-            const notificationPage = document.getElementById("noti");
-            notificationPage.style.display = "none"; // Hide notification when close button is clicked
-            event.stopPropagation(); // Prevent the click from propagating
-        });
-    </script>
+    <script src="java.js"></script>
 </body>
 </html>

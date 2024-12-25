@@ -179,7 +179,7 @@
 }
 
 .related-products h2 {
-    color: #0ef;
+    color: black;
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
@@ -190,6 +190,8 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 2rem;
+    justify-content: space-evenly;
+    justify-items: center;
 }
 
 .product-card {

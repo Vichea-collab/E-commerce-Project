@@ -85,7 +85,7 @@ body {
     display:flex;
     cursor: pointer;
     padding:10px 20px;
-    background: #F9F1E7;
+    background: white;
     border-radius: 30px;
     align-items: center;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
@@ -245,18 +245,18 @@ body {
 /* Breadcrumb */
 .breadcrumb {
     padding: 2rem;
-    background-color: #F9F1E7;
-    color: #666;
+    background-color: rgb(89, 123, 126);
+    color: white;
     margin-top:-0.2rem;
 }
 
 .breadcrumb a {
-    color: #333;
+    color: white;
     text-decoration: none;
 }
 
 .breadcrumb span {
-    color: #999;
+    color: white;
 }
 
 /* Product Section */

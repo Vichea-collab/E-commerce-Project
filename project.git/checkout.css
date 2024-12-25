@@ -82,7 +82,7 @@ body{
     display:flex;
     cursor: pointer;
     padding:10px 20px;
-    background: #F9F1E7;
+    background: white;
     border-radius: 30px;
     align-items: center;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
